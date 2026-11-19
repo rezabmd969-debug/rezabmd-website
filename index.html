@@ -3,141 +3,177 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مدیریت و نمایش محصولات</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LOGO | استودیوی طراحی گرافیک</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+:root{--bg:#0c0c13;--panel:#171722;--purple:#a78bfa;--text:#f7f5ff;--muted:#aaa6b9}
 *{box-sizing:border-box}
-body{margin:0;font-family:Tahoma,sans-serif;background:#f3f5f9;color:#202536}
-header{background:#171d32;color:white;padding:25px 16px;text-align:center}
-header h1{margin:0 0 10px}
-nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
-button{border:0;border-radius:9px;padding:12px 18px;cursor:pointer;font-weight:bold;background:#34466e;color:white}
-button:hover{opacity:.85}
-main{max-width:1100px;margin:25px auto;padding:0 15px}
-.panel{background:white;padding:20px;border-radius:15px;margin-bottom:20px;box-shadow:0 3px 15px #0000000c}
-input,textarea{width:100%;padding:12px;margin:8px 0 14px;border:1px solid #d8dce5;border-radius:8px;font:inherit}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.item{background:white;border-radius:13px;overflow:hidden;box-shadow:0 3px 12px #00000012}
-.item img{width:100%;height:190px;object-fit:cover;background:#e8eaf0}
-.info{padding:15px}
-.price{color:#16845b;font-weight:bold}
-.danger{background:#b52e3b}
-.hidden{display:none}
-footer{text-align:center;padding:25px;color:#777}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif}
+header{padding:20px 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #292637;flex-wrap:wrap;gap:15px}
+.logo{font-size:27px;font-weight:800;letter-spacing:3px;color:var(--purple)}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+a{color:inherit;text-decoration:none}
+nav a{color:#d6d1e2;font-size:14px}
+.hero{padding:90px 7%;background:radial-gradient(ellipse at 75% 20%,#49327655,transparent 55%)}
+.tag{color:var(--purple);font-weight:700}
+h1{font-size:clamp(35px,6vw,65px);line-height:1.5;margin:15px 0}
+.hero p{color:var(--muted);line-height:2;max-width:600px}
+.btn{display:inline-block;background:var(--purple);color:#171020;padding:13px 23px;border-radius:10px;font-weight:800;border:0;cursor:pointer;font-family:inherit}
+section{padding:65px 7%}
+.section-title{font-size:28px;margin:0 0 10px}
+.sub{color:var(--muted);margin-bottom:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid #2b2939;border-radius:17px;overflow:hidden}
+.card img{width:100%;height:190px;object-fit:cover;background:#272435}
+.card-content{padding:20px}
+.card h3{margin-top:0}
+.price{color:var(--purple);font-size:20px;font-weight:800}
+.muted{color:var(--muted);line-height:2;font-size:14px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+.feature{padding:22px;background:var(--panel);border-radius:14px;border:1px solid #2b2939}
+.feature b{color:var(--purple);font-size:19px}
+.contact{background:#171522;text-align:center}
+footer{padding:30px;text-align:center;color:var(--muted);border-top:1px solid #292637}
+.admin{display:none;background:#171722;padding:25px 7%;border-top:2px solid var(--purple)}
+input,textarea{width:100%;padding:13px;margin:8px 0 16px;border-radius:9px;border:1px solid #393548;background:#0e0d16;color:white;font:inherit}
+label{font-size:14px;color:#d9d3e8}
+.admin-box{max-width:650px;margin:auto}
+button{font-family:inherit}
+.danger{background:#a52e45;color:white}
+.small{padding:8px 12px;margin:5px}
 </style>
 </head>
 <body>
 <header>
-<h1 id="siteTitle">فروشگاه و گالری من</h1>
-<p>نمایش محصولات، تصاویر و قیمت‌ها</p>
+<div class="logo">LOGO.</div>
 <nav>
-<button onclick="showHome()">صفحه اصلی</button>
-<button onclick="login()">ورود مدیر</button>
+<a href="#home">خانه</a>
+<a href="#services">خدمات</a>
+<a href="#prices">تعرفه‌ها</a>
+<a href="#gallery">نمونه‌کارها</a>
+<a href="#contact">ارتباط</a>
 </nav>
 </header>
 
-<main>
-<section id="home">
-<h2>محصولات و تصاویر</h2>
-<div class="grid" id="products"></div>
+<div class="hero" id="home">
+<div class="tag">CREATIVE GRAPHIC DESIGN STUDIO</div>
+<h1>ایده‌های شما،<br>با طراحی حرفه‌ای ماندگار می‌شوند.</h1>
+<p>استودیوی طراحی گرافیک LOGO؛ همراه شما برای خلق هویت بصری، طراحی لوگو، پوستر و محتوای تبلیغاتی.</p>
+<a class="btn" href="#gallery">مشاهده نمونه‌کارها</a>
+</div>
+
+<section id="services">
+<h2 class="section-title">خدمات ما</h2>
+<p class="sub">طراحی خلاقانه، متناسب با هویت برند شما</p>
+<div class="features">
+<div class="feature"><b>✦ طراحی لوگو</b><p class="muted">خلق هویت بصری اختصاصی برای برند شما</p></div>
+<div class="feature"><b>✦ طراحی پوستر</b><p class="muted">پوسترهای تبلیغاتی و حرفه‌ای</p></div>
+<div class="feature"><b>✦ طراحی بنر</b><p class="muted">بنرهای تبلیغاتی و شبکه‌های اجتماعی</p></div>
+<div class="feature"><b>✦ طراحی اختصاصی</b><p class="muted">اجرای سفارش‌های گرافیکی متنوع</p></div>
+</div>
 </section>
 
-<section id="admin" class="hidden">
-<div class="panel">
-<h2>پنل مدیریت</h2>
-<label>عنوان سایت</label>
-<input id="titleInput" placeholder="عنوان جدید سایت">
-<button onclick="changeTitle()">تغییر عنوان</button>
-</div>
+<section id="prices">
+<h2 class="section-title">تعرفه خدمات</h2>
+<p class="sub">برای مشاهده قیمت‌ها و جزئیات خدمات</p>
+<div class="cards" id="priceCards"></div>
+</section>
 
-<div class="panel">
-<h2>افزودن محصول یا تصویر</h2>
-<label>نام محصول</label>
-<input id="name" placeholder="نام محصول">
-<label>قیمت</label>
-<input id="price" placeholder="قیمت محصول">
-<label>توضیحات</label>
-<textarea id="description" placeholder="توضیحات محصول"></textarea>
-<label>انتخاب تصویر</label>
-<input id="photo" type="file" accept="image/*">
-<button onclick="addProduct()">افزودن به سایت</button>
-</div>
+<section id="gallery">
+<h2 class="section-title">نمونه‌کارها</h2>
+<p class="sub">بخشی از آثار و پروژه‌های طراحی</p>
+<div class="cards" id="galleryCards"></div>
+</section>
 
-<div class="panel">
-<h2>مدیریت محصولات</h2>
+<section class="contact" id="contact">
+<h2 class="section-title">برای شروع همکاری آماده‌ایم</h2>
+<p class="muted">برای ثبت سفارش و دریافت مشاوره با ما در ارتباط باشید.</p>
+<p>تلفن: ۰۹۳۸</p>
+<p>شناسه بله: @lOoloOlOoloOl</p>
+</section>
+
+<section id="admin" class="admin">
+<div class="admin-box">
+<h2>پنل مدیریت سایت</h2>
+<p class="muted">مدیریت تعرفه‌ها و نمونه‌کارها</p>
+<h3>افزودن تعرفه</h3>
+<label>عنوان خدمت</label><input id="pname">
+<label>قیمت</label><input id="pprice">
+<label>توضیحات</label><textarea id="pdesc"></textarea>
+<button class="btn" onclick="addPrice()">افزودن تعرفه</button>
+<hr>
+<h3>افزودن نمونه‌کار</h3>
+<label>عنوان تصویر</label><input id="gname">
+<label>انتخاب تصویر</label><input type="file" id="gphoto" accept="image/*">
+<button class="btn" onclick="addGallery()">افزودن تصویر</button>
+<hr>
+<h3>مدیریت محتوا</h3>
 <div id="manage"></div>
 </div>
 </section>
-</main>
 
-<footer>طراحی و مدیریت سایت</footer>
+<footer>© LOGO Studio | تمامی حقوق محفوظ است</footer>
 
 <script>
-const PASSWORD="123456";
-let products=JSON.parse(localStorage.getItem("myProducts")||"[]");
-let title=localStorage.getItem("myTitle")||"فروشگاه و گالری من";
+const defaultPrices=[
+{ name:"طراحی لوگو",price:"توافقی",desc:"طراحی هویت بصری اختصاصی" },
+{ name:"طراحی پوستر",price:"توافقی",desc:"طراحی پوستر تبلیغاتی حرفه‌ای" },
+{ name:"طراحی بنر",price:"توافقی",desc:"طراحی بنر شبکه‌های اجتماعی" }
+];
+let prices=JSON.parse(localStorage.getItem("logoPrices")||"null")||defaultPrices;
+let gallery=JSON.parse(localStorage.getItem("logoGallery")||"[]");
 
-function save(){
-localStorage.setItem("myProducts",JSON.stringify(products));
-localStorage.setItem("myTitle",title);
-}
-function render(){
-document.getElementById("siteTitle").textContent=title;
-document.getElementById("titleInput").value=title;
-document.getElementById("products").innerHTML=products.map((p,i)=>`
-<div class="item">
-<img src="${p.image}" alt="">
-<div class="info">
-<h3>${escapeHTML(p.name)}</h3>
-<p>${escapeHTML(p.description)}</p>
-<div class="price">${escapeHTML(p.price)}</div>
-</div></div>`).join("");
-document.getElementById("manage").innerHTML=products.map((p,i)=>`
-<p>${escapeHTML(p.name)} <button class="danger" onclick="removeProduct(${i})">حذف</button></p>`).join("");
-}
-function escapeHTML(s){
+function safe(s){
 return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 }
-function showHome(){
-document.getElementById("home").classList.remove("hidden");
-document.getElementById("admin").classList.add("hidden");
+function save(){
+localStorage.setItem("logoPrices",JSON.stringify(prices));
+localStorage.setItem("logoGallery",JSON.stringify(gallery));
+}
+function render(){
+document.getElementById("priceCards").innerHTML=prices.map(p=>`
+<div class="card"><div class="card-content"><h3>${safe(p.name)}</h3>
+<p class="muted">${safe(p.desc)}</p><div class="price">${safe(p.price)}</div></div></div>`).join("");
+document.getElementById("galleryCards").innerHTML=gallery.map(g=>`
+<div class="card"><img src="${g.image}" alt=""><div class="card-content"><h3>${safe(g.name)}</h3></div></div>`).join("");
+document.getElementById("manage").innerHTML=
+"<h4>تعرفه‌ها</h4>"+prices.map((p,i)=>`<p>${safe(p.name)} <button class="danger small" onclick="delPrice(${i})">حذف</button></p>`).join("")+
+"<h4>نمونه‌کارها</h4>"+gallery.map((g,i)=>`<p>${safe(g.name)} <button class="danger small" onclick="delGallery(${i})">حذف</button></p>`).join("");
 }
 function login(){
-let pass=prompt("رمز ورود مدیر را وارد کنید:");
-if(pass===PASSWORD){
-document.getElementById("home").classList.add("hidden");
-document.getElementById("admin").classList.remove("hidden");
-render();
-}else if(pass!==null){alert("رمز اشتباه است");}
+let pass=prompt("رمز آزمایشی مدیریت را وارد کنید:");
+if(pass==="123456"){
+document.getElementById("admin").style.display="block";
+document.getElementById("admin").scrollIntoView({behavior:"smooth"});
+}else if(pass!==null) alert("رمز اشتباه است");
 }
-function changeTitle(){
-title=document.getElementById("titleInput").value.trim()||title;
-save();render();alert("عنوان تغییر کرد");
+function addPrice(){
+let name=document.getElementById("pname").value.trim();
+let price=document.getElementById("pprice").value.trim();
+let desc=document.getElementById("pdesc").value.trim();
+if(!name||!price){alert("عنوان و قیمت را وارد کنید");return;}
+prices.push({name,price,desc});save();render();
+document.getElementById("pname").value="";
+document.getElementById("pprice").value="";
+document.getElementById("pdesc").value="";
 }
-function addProduct(){
-let file=document.getElementById("photo").files[0];
-if(!file){alert("لطفاً تصویر انتخاب کنید");return;}
-if(file.size>2*1024*1024){alert("حجم تصویر باید کمتر از ۲ مگابایت باشد");return;}
+function addGallery(){
+let file=document.getElementById("gphoto").files[0];
+let name=document.getElementById("gname").value.trim();
+if(!file||!name){alert("عنوان و تصویر را انتخاب کنید");return;}
+if(file.size>1500000){alert("حجم تصویر باید کمتر از ۱.۵ مگابایت باشد");return;}
 let reader=new FileReader();
 reader.onload=()=>{
-products.push({
-name:document.getElementById("name").value,
-price:document.getElementById("price").value,
-description:document.getElementById("description").value,
-image:reader.result
-});
-try{save();render();alert("محصول اضافه شد");}
-catch(e){alert("فضای ذخیره‌سازی مرورگر کافی نیست");}
+gallery.push({name,image:reader.result});
+try{save();render();alert("تصویر اضافه شد");}
+catch(e){gallery.pop();alert("حافظه مرورگر کافی نیست");}
 };
 reader.readAsDataURL(file);
 }
-function removeProduct(i){
-if(confirm("این محصول حذف شود؟")){
-products.splice(i,1);save();render();
-}
-}
+function delPrice(i){if(confirm("تعرفه حذف شود؟")){prices.splice(i,1);save();render();}}
+function delGallery(i){if(confirm("تصویر حذف شود؟")){gallery.splice(i,1);save();render();}}
 render();
 </script>
 </body>
-  </html>
-  
+</html>
