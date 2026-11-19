@@ -1,179 +1,348 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LOGO | استودیوی طراحی گرافیک</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="تعرفه طراحی لوگو، پوستر، بنر و خدمات گرافیکی">
+<meta name="theme-color" content="#ffffff">
+<title>لوگو | LOGO — استودیوی طراحی گرافیک</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
-:root{--bg:#0c0c13;--panel:#171722;--purple:#a78bfa;--text:#f7f5ff;--muted:#aaa6b9}
+:root{--ink:#111;--muted:#777;--line:#e9e9e9;--soft:#f5f5f5}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif}
-header{padding:20px 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #292637;flex-wrap:wrap;gap:15px}
-.logo{font-size:27px;font-weight:800;letter-spacing:3px;color:var(--purple)}
-nav{display:flex;gap:20px;flex-wrap:wrap}
-a{color:inherit;text-decoration:none}
-nav a{color:#d6d1e2;font-size:14px}
-.hero{padding:90px 7%;background:radial-gradient(ellipse at 75% 20%,#49327655,transparent 55%)}
-.tag{color:var(--purple);font-weight:700}
-h1{font-size:clamp(35px,6vw,65px);line-height:1.5;margin:15px 0}
-.hero p{color:var(--muted);line-height:2;max-width:600px}
-.btn{display:inline-block;background:var(--purple);color:#171020;padding:13px 23px;border-radius:10px;font-weight:800;border:0;cursor:pointer;font-family:inherit}
-section{padding:65px 7%}
-.section-title{font-size:28px;margin:0 0 10px}
-.sub{color:var(--muted);margin-bottom:30px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:var(--panel);border:1px solid #2b2939;border-radius:17px;overflow:hidden}
-.card img{width:100%;height:190px;object-fit:cover;background:#272435}
-.card-content{padding:20px}
-.card h3{margin-top:0}
-.price{color:var(--purple);font-size:20px;font-weight:800}
-.muted{color:var(--muted);line-height:2;font-size:14px}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
-.feature{padding:22px;background:var(--panel);border-radius:14px;border:1px solid #2b2939}
-.feature b{color:var(--purple);font-size:19px}
-.contact{background:#171522;text-align:center}
-footer{padding:30px;text-align:center;color:var(--muted);border-top:1px solid #292637}
-.admin{display:none;background:#171722;padding:25px 7%;border-top:2px solid var(--purple)}
-input,textarea{width:100%;padding:13px;margin:8px 0 16px;border-radius:9px;border:1px solid #393548;background:#0e0d16;color:white;font:inherit}
-label{font-size:14px;color:#d9d3e8}
-.admin-box{max-width:650px;margin:auto}
-button{font-family:inherit}
-.danger{background:#a52e45;color:white}
-.small{padding:8px 12px;margin:5px}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;color:var(--ink);background:#fff}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+.wrap{max-width:1120px;margin:auto;padding:0 24px}
+.nav{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;background:#fff;position:sticky;top:0;z-index:4}
+.brand{font-size:24px;font-weight:900;direction:ltr}
+.brand span{color:#999;font-weight:300}
+.links{display:flex;gap:22px;align-items:center}
+.links a{color:#444;text-decoration:none;font-size:13px}
+.btn{border:1px solid #111;background:#111;color:#fff;border-radius:6px;padding:12px 18px;text-decoration:none;display:inline-block}
+.btn.light{background:#fff;color:#111;border-color:#ddd}
+.hero{background:#f5f5f5;padding:85px 0;overflow:hidden}
+.eyebrow{font-size:11px;letter-spacing:2px;color:#888}
+.hero-in{position:relative}
+.watermark{position:absolute;left:0;top:-30px;font-size:clamp(120px,24vw,260px);font-weight:900;color:#e9e9e9;direction:ltr;pointer-events:none}
+.hero h1{font-size:clamp(44px,8vw,86px);line-height:1.25;letter-spacing:-3px;margin:18px 0;position:relative}
+.hero h1 span{color:#999}
+.hero p{max-width:480px;color:#666;font-size:14px;line-height:2.2;position:relative}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;position:relative}
+.section{padding:64px 0}
+.section.gray{background:#f7f7f7}
+.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px;gap:20px}
+.head h2{font-size:28px;margin:8px 0}
+.muted{color:#888;font-size:12px;line-height:2}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{border:1px solid var(--line);border-radius:9px;padding:22px;min-height:205px;display:flex;flex-direction:column}
+.card .no{font-size:11px;color:#999}
+.card h3{font-size:18px;margin:18px 0 8px}
+.card p{font-size:12px;color:#777;line-height:2;margin:0 0 18px}
+.price{font-size:19px;font-weight:bold;margin-top:auto}
+.price small{font-size:10px;color:#888;font-weight:normal}
+.card button{margin-top:16px}
+.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.work{aspect-ratio:1.15;background:#111;color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;text-align:center}
+.work:nth-child(2n){background:#eee;color:#111}
+.work strong{font-size:clamp(20px,4vw,32px);direction:ltr}
+.work.has-image{display:block;overflow:hidden;position:relative;background:#eee;color:#111}
+.work.has-image img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.work.has-image .work-caption{position:absolute;bottom:0;right:0;left:0;padding:14px;background:linear-gradient(transparent,#000b);color:#fff;text-align:right}
+.work.has-image .work-caption strong{font-size:16px}
+.work.has-image .work-caption small{display:block;margin-top:5px}
+.work small{display:block;margin-top:10px;font-size:10px;opacity:.65}
+.promo{background:#111;color:#fff;border-radius:10px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.promo h2{font-size:26px}
+.promo p{color:#bbb;font-size:13px;line-height:2}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about p{color:#666;font-size:13px;line-height:2.5}
+.about-logo{background:#111;color:#fff;aspect-ratio:1.4;display:grid;place-items:center;font-size:clamp(40px,8vw,75px);font-weight:900;direction:ltr}
+.contact{background:#111;color:#fff;padding:48px 0}
+.contact p{color:#bbb;font-size:13px;line-height:2}
+.contact-in{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+footer{padding:22px 0;color:#888;font-size:11px;display:flex;justify-content:space-between;gap:15px}
+.modal{display:none;position:fixed;inset:0;background:#0009;z-index:10;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}
+.dialog{background:#fff;border-radius:12px;padding:24px;width:min(460px,100%);max-height:90vh;overflow:auto}
+.dialog h3{margin-top:0}
+.field{display:block;margin:14px 0;font-size:12px;color:#555}
+.field input,.field textarea,.field select{width:100%;display:block;margin-top:7px;padding:12px;border:1px solid #ddd;border-radius:6px;background:white}
+.field textarea{min-height:90px}
+.admin{display:none;background:#f7f7f7;padding:40px 0}
+.admin.show{display:block}
+.adminbox{background:white;border:1px solid var(--line);border-radius:9px;padding:22px;margin-top:18px}
+.adminnav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.adminnav button,.mini{border:1px solid #ddd;background:white;padding:9px 12px;border-radius:5px;font-size:12px}
+.adminnav button.active{background:#111;color:#fff}
+.row{padding:13px 0;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px}
+.toast{position:fixed;bottom:20px;left:20px;background:#111;color:#fff;padding:13px 18px;border-radius:7px;display:none;z-index:20;font-size:12px}
+.mobile{display:none}
+@media(max-width:700px){
+.links{display:none}.mobile{display:block;border:0;background:none;font-size:23px}
+.cards{grid-template-columns:repeat(2,1fr)}
+.portfolio{grid-template-columns:repeat(2,1fr)}
+.about{grid-template-columns:1fr}
+.hero{padding:60px 0}
+.promo{align-items:flex-start;flex-direction:column}
+.head h2{font-size:23px}
+}
+@media(max-width:420px){
+.cards{grid-template-columns:1fr}
+.wrap{padding:0 17px}
+.hero h1{letter-spacing:-2px}
+}
 </style>
 </head>
 <body>
-<header>
-<div class="logo">LOGO.</div>
-<nav>
-<a href="#home">خانه</a>
-<a href="#services">خدمات</a>
-<a href="#prices">تعرفه‌ها</a>
-<a href="#gallery">نمونه‌کارها</a>
+<header class="nav">
+<div class="wrap" style="display:flex;align-items:center;justify-content:space-between;width:100%">
+<a class="brand" href="#" style="text-decoration:none;color:#111">LOGO<span>|</span>لوگو</a>
+<nav class="links">
+<a href="#services">تعرفه‌ها</a>
+<a href="#portfolio">نمونه‌کارها</a>
+<a href="#about">درباره من</a>
 <a href="#contact">ارتباط</a>
+<button class="btn" onclick="openOrder()">ثبت سفارش</button>
 </nav>
+<button class="mobile" onclick="document.getElementById('mobileLinks').hidden=!document.getElementById('mobileLinks').hidden">☰</button>
+</div>
 </header>
-
-<div class="hero" id="home">
-<div class="tag">CREATIVE GRAPHIC DESIGN STUDIO</div>
-<h1>ایده‌های شما،<br>با طراحی حرفه‌ای ماندگار می‌شوند.</h1>
-<p>استودیوی طراحی گرافیک LOGO؛ همراه شما برای خلق هویت بصری، طراحی لوگو، پوستر و محتوای تبلیغاتی.</p>
-<a class="btn" href="#gallery">مشاهده نمونه‌کارها</a>
+<div id="mobileLinks" hidden class="wrap" style="padding-top:15px;padding-bottom:15px">
+<a href="#services">تعرفه‌ها</a>　
+<a href="#portfolio">نمونه‌کارها</a>　
+<a href="#about">درباره من</a>　
+<a href="#contact">ارتباط</a>　
+<button class="btn" onclick="openOrder()">ثبت سفارش</button>
 </div>
-
-<section id="services">
-<h2 class="section-title">خدمات ما</h2>
-<p class="sub">طراحی خلاقانه، متناسب با هویت برند شما</p>
-<div class="features">
-<div class="feature"><b>✦ طراحی لوگو</b><p class="muted">خلق هویت بصری اختصاصی برای برند شما</p></div>
-<div class="feature"><b>✦ طراحی پوستر</b><p class="muted">پوسترهای تبلیغاتی و حرفه‌ای</p></div>
-<div class="feature"><b>✦ طراحی بنر</b><p class="muted">بنرهای تبلیغاتی و شبکه‌های اجتماعی</p></div>
-<div class="feature"><b>✦ طراحی اختصاصی</b><p class="muted">اجرای سفارش‌های گرافیکی متنوع</p></div>
+<section class="hero">
+<div class="wrap hero-in">
+<div class="watermark">L.</div>
+<div class="eyebrow">CREATIVE DESIGN STUDIO / 2026</div>
+<h1>ایده‌هایت را<br><span>به تصویر بکش.</span></h1>
+<p>استودیوی طراحی لوگو؛ جایی برای ساخت هویت بصری ماندگار، طراحی خلاقانه و تبدیل ایده‌ها به یک تصویر حرفه‌ای.</p>
+<div class="actions">
+<a class="btn" href="#services">مشاهده تعرفه‌ها ↙</a>
+<a class="btn light" href="#portfolio">دیدن نمونه‌کارها</a>
+</div>
 </div>
 </section>
-
-<section id="prices">
-<h2 class="section-title">تعرفه خدمات</h2>
-<p class="sub">برای مشاهده قیمت‌ها و جزئیات خدمات</p>
-<div class="cards" id="priceCards"></div>
+<section class="section wrap" id="services">
+<div class="head">
+<div>
+<div class="eyebrow">OUR SERVICES / 01</div>
+<h2>تعرفه خدمات</h2>
+<div class="muted">قیمت‌های نمونه؛ از پنل مدیریت قابل ویرایش هستند.</div>
+</div>
+</div>
+<div class="cards" id="servicesList"></div>
 </section>
-
-<section id="gallery">
-<h2 class="section-title">نمونه‌کارها</h2>
-<p class="sub">بخشی از آثار و پروژه‌های طراحی</p>
-<div class="cards" id="galleryCards"></div>
+<section class="section gray" id="portfolio">
+<div class="wrap">
+<div class="head">
+<div>
+<div class="eyebrow">SELECTED WORK / 02</div>
+<h2>نمونه‌کارها</h2>
+<div class="muted">چند قاب نمایشی برای نمایش سبک طراحی</div>
+</div>
+</div>
+<div class="portfolio" id="worksList">
+<div class="work"><div><strong>BRAND.</strong><small>BRANDING & IDENTITY</small></div></div>
+<div class="work"><div><strong>LOGO®</strong><small>LOGO DESIGN</small></div></div>
+<div class="work"><div><strong>CREATIVE</strong><small>VISUAL DESIGN</small></div></div>
+</div>
+<p class="muted">این موارد نمونه نمایشی‌اند؛ عنوان نمونه‌کارهای واقعی را از پنل مدیریت اضافه کن.</p>
+</div>
 </section>
-
+<section class="section wrap">
+<div class="promo">
+<div>
+<div class="eyebrow" style="color:#aaa">SPECIAL OFFER / 03</div>
+<h2 id="promoTitle">شروع یک همکاری خلاقانه</h2>
+<p id="promoDesc">برای اطلاع از تخفیف‌ها و جشنواره‌های طراحی با ما در ارتباط باشید.</p>
+</div>
+<button class="btn light" onclick="openOrder()">ثبت سفارش</button>
+</div>
+</section>
+<section class="section gray" id="about">
+<div class="wrap about">
+<div>
+<div class="eyebrow">ABOUT THE STUDIO / 04</div>
+<h2>درباره لوگو</h2>
+<p id="aboutText">ما به قدرت طراحی باور داریم. هدف ما ساخت طرح‌هایی است که تنها زیبا نیستند، بلکه هویت، شخصیت و داستان یک برند را به تصویر می‌کشند. این بخش را با معرفی و سوابق خودت تکمیل کن.</p>
+<a href="#contact" class="btn">ارتباط با ما</a>
+</div>
+<div class="about-logo">LOGO.</div>
+</div>
+</section>
 <section class="contact" id="contact">
-<h2 class="section-title">برای شروع همکاری آماده‌ایم</h2>
-<p class="muted">برای ثبت سفارش و دریافت مشاوره با ما در ارتباط باشید.</p>
-<p>تلفن: ۰۹۳۸</p>
-<p>شناسه بله: @lOoloOlOoloOl</p>
-</section>
-
-<section id="admin" class="admin">
-<div class="admin-box">
-<h2>پنل مدیریت سایت</h2>
-<p class="muted">مدیریت تعرفه‌ها و نمونه‌کارها</p>
-<h3>افزودن تعرفه</h3>
-<label>عنوان خدمت</label><input id="pname">
-<label>قیمت</label><input id="pprice">
-<label>توضیحات</label><textarea id="pdesc"></textarea>
-<button class="btn" onclick="addPrice()">افزودن تعرفه</button>
-<hr>
-<h3>افزودن نمونه‌کار</h3>
-<label>عنوان تصویر</label><input id="gname">
-<label>انتخاب تصویر</label><input type="file" id="gphoto" accept="image/*">
-<button class="btn" onclick="addGallery()">افزودن تصویر</button>
-<hr>
-<h3>مدیریت محتوا</h3>
-<div id="manage"></div>
+<div class="wrap contact-in">
+<div>
+<div class="eyebrow" style="color:#aaa">LET'S WORK TOGETHER / 05</div>
+<h2>ایده‌ای در ذهن داری؟</h2>
+<p>برای شروع یک پروژه جدید با ما در ارتباط باش.</p>
+</div>
+<div>
+<p id="contactText">شماره تماس: <a href="tel:+989386225330" style="color:inherit;direction:ltr;display:inline-block">+98 938 622 5330</a><br>بله: <a href="https://ble.ir/lOoloOlOoloOl" target="_blank" rel="noopener" style="color:inherit;direction:ltr;display:inline-block">@lOoloOlOoloOl</a></p>
+<button class="btn light" onclick="openOrder()">درخواست طراحی</button>
+</div>
 </div>
 </section>
-
-<footer>© LOGO Studio | تمامی حقوق محفوظ است</footer>
-
+<footer class="wrap">
+<span>© LOGO STUDIO 2026</span>
+<button class="mini" onclick="login()">ورود مدیریت ⚙</button>
+</footer>
+<section class="admin" id="admin">
+<div class="wrap">
+<div class="eyebrow">PRIVATE DASHBOARD</div>
+<h2>پنل مدیریت</h2>
+<p class="muted">تعرفه‌ها، اطلاعات و تصاویر در همین مرورگر ذخیره می‌شوند. برای امنیت واقعی رمز مدیریت، ورود باید به سرور منتقل شود. سفارش مشتری به‌صورت خودکار در پنل ثبت نمی‌شود؛ پس از ثبت فرم، متن سفارش کپی و کانال بله باز می‌شود تا مشتری آن را ارسال کند.</p>
+<div class="adminnav">
+<button class="active" onclick="adminTab('services',this)">تعرفه‌ها</button>
+<button onclick="adminTab('orders',this)">سفارش‌ها</button>
+<button onclick="adminTab('promo',this)">تخفیف‌ها</button>
+<button onclick="adminTab('info',this)">اطلاعات سایت</button>
+<button onclick="adminTab('works',this)">نمونه‌کارها</button>
+</div>
+<div class="adminbox" id="adminContent"></div>
+<button class="btn light" style="margin-top:15px" onclick="document.getElementById('admin').classList.remove('show')">خروج</button>
+</div>
+</section>
+<div class="modal" id="orderModal">
+<div class="dialog">
+<div style="display:flex;justify-content:space-between">
+<h3>ثبت سفارش طراحی</h3>
+<button class="mini" onclick="closeModal('orderModal')">✕</button>
+</div>
+<p class="muted">پس از تکمیل فرم، متن سفارش کپی می‌شود و کانال بله باز خواهد شد؛ پیام را آنجا ارسال کن.</p>
+<form id="orderForm">
+<label class="field">نام و نام خانوادگی<input name="name" required></label>
+<label class="field">شماره تماس<input name="phone" required type="tel"></label>
+<label class="field">نوع خدمات<select name="service" id="serviceSelect"></select></label>
+<label class="field">توضیحات پروژه<textarea name="details"></textarea></label>
+<button class="btn" type="submit">ثبت درخواست</button>
+</form>
+</div>
+</div>
+<div class="modal" id="loginModal">
+<div class="dialog">
+<h3>ورود به پنل مدیریت</h3>
+<label class="field">رمز عبور<input id="adminPass" type="password"></label>
+<button class="btn" onclick="checkLogin()">ورود</button>
+<button class="mini" onclick="closeModal('loginModal')">انصراف</button>
+</div>
+</div>
+<div class="toast" id="toast"></div>
 <script>
-const defaultPrices=[
-{ name:"طراحی لوگو",price:"توافقی",desc:"طراحی هویت بصری اختصاصی" },
-{ name:"طراحی پوستر",price:"توافقی",desc:"طراحی پوستر تبلیغاتی حرفه‌ای" },
-{ name:"طراحی بنر",price:"توافقی",desc:"طراحی بنر شبکه‌های اجتماعی" }
+const defaults=[
+{id:1,name:'طراحی لوگو',desc:'طراحی هویت بصری اختصاصی و حرفه‌ای برای برند شما',price:1500000},
+{id:2,name:'طراحی پوستر',desc:'طراحی پوستر تبلیغاتی با ترکیب‌بندی حرفه‌ای',price:500000},
+{id:3,name:'طراحی بنر',desc:'طراحی بنر تبلیغاتی و شبکه‌های اجتماعی',price:350000},
+{id:4,name:'کارت ویزیت',desc:'طراحی کارت ویزیت مدرن و اختصاصی',price:400000},
+{id:5,name:'طراحی کاتالوگ',desc:'طراحی صفحات معرفی محصولات و خدمات',price:1200000},
+{id:6,name:'طراحی پست اینستاگرام',desc:'طراحی محتوای بصری برای شبکه‌های اجتماعی',price:300000}
 ];
-let prices=JSON.parse(localStorage.getItem("logoPrices")||"null")||defaultPrices;
-let gallery=JSON.parse(localStorage.getItem("logoGallery")||"[]");
-
-function safe(s){
-return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-}
-function save(){
-localStorage.setItem("logoPrices",JSON.stringify(prices));
-localStorage.setItem("logoGallery",JSON.stringify(gallery));
+const get=(k,d)=>{try{return JSON.parse(localStorage.getItem('logo_'+k))??d}catch{return d}};
+const put=(k,v)=>localStorage.setItem('logo_'+k,JSON.stringify(v));
+let services=get('services',defaults),
+orders=get('orders',[]),
+works=get('works',[]),
+promo=get('promo',{title:'شروع یک همکاری خلاقانه',desc:'برای اطلاع از تخفیف‌ها و جشنواره‌های طراحی با ما در ارتباط باشید.'}),
+info=get('info',{about:'ما به قدرت طراحی باور داریم. هدف ما ساخت طرح‌هایی است که تنها زیبا نیستند، بلکه هویت، شخصیت و داستان یک برند را به تصویر می‌کشند.',contact:'شماره تماس: +98 938 622 5330\nبله: @lOoloOlOoloOl'});
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money=n=>Number(n||0).toLocaleString('en-US')+' تومان';
+function notify(t){
+let e=document.getElementById('toast');
+e.textContent=t;e.style.display='block';
+setTimeout(()=>e.style.display='none',2600)
 }
 function render(){
-document.getElementById("priceCards").innerHTML=prices.map(p=>`
-<div class="card"><div class="card-content"><h3>${safe(p.name)}</h3>
-<p class="muted">${safe(p.desc)}</p><div class="price">${safe(p.price)}</div></div></div>`).join("");
-document.getElementById("galleryCards").innerHTML=gallery.map(g=>`
-<div class="card"><img src="${g.image}" alt=""><div class="card-content"><h3>${safe(g.name)}</h3></div></div>`).join("");
-document.getElementById("manage").innerHTML=
-"<h4>تعرفه‌ها</h4>"+prices.map((p,i)=>`<p>${safe(p.name)} <button class="danger small" onclick="delPrice(${i})">حذف</button></p>`).join("")+
-"<h4>نمونه‌کارها</h4>"+gallery.map((g,i)=>`<p>${safe(g.name)} <button class="danger small" onclick="delGallery(${i})">حذف</button></p>`).join("");
+document.getElementById('servicesList').innerHTML=services.map((s,i)=>`<article class="card"><div class="no">SERVICE / 0${i+1}</div><h3>${esc(s.name)}</h3><p>${esc(s.desc)}</p><div class="price">${money(s.price)}</div><button class="btn light" onclick="openOrder('${s.id}')">سفارش این خدمت ←</button></article>`).join('');
+document.getElementById('serviceSelect').innerHTML=services.map(s=>`<option>${esc(s.name)}</option>`).join('');
+document.getElementById('promoTitle').textContent=promo.title;
+document.getElementById('promoDesc').textContent=promo.desc;
+document.getElementById('aboutText').textContent=info.about;
+document.getElementById('contactText').innerHTML=esc(info.contact).replace(/\n/g,'<br>')+'<br><a href="https://ble.ir/lOoloOlOoloOl" target="_blank" rel="noopener" style="color:#fff">باز کردن کانال بله ↗</a>　<a href="tel:+989386225330" style="color:#fff">تماس مستقیم</a>';
+document.getElementById('worksList').innerHTML=(works.length?works:[{name:'BRAND.',desc:'BRANDING & IDENTITY'},{name:'LOGO®',desc:'LOGO DESIGN'},{name:'CREATIVE',desc:'VISUAL DESIGN'}]).map((w,i)=>w.image?`<div class="work has-image"><img src="${w.image}" alt="${esc(w.name)}"><div class="work-caption"><strong>${esc(w.name)}</strong><small>${esc(w.desc)}</small></div></div>`:`<div class="work" style="${i%2?'background:#eee;color:#111':''}"><div><strong>${esc(w.name)}</strong><small>${esc(w.desc)}</small></div></div>`).join('')
 }
-function login(){
-let pass=prompt("رمز آزمایشی مدیریت را وارد کنید:");
-if(pass==="123456"){
-document.getElementById("admin").style.display="block";
-document.getElementById("admin").scrollIntoView({behavior:"smooth"});
-}else if(pass!==null) alert("رمز اشتباه است");
+function openOrder(id){
+document.getElementById('orderModal').classList.add('open');
+if(id){let s=services.find(x=>x.id==id);if(s)document.getElementById('serviceSelect').value=s.name}
 }
-function addPrice(){
-let name=document.getElementById("pname").value.trim();
-let price=document.getElementById("pprice").value.trim();
-let desc=document.getElementById("pdesc").value.trim();
-if(!name||!price){alert("عنوان و قیمت را وارد کنید");return;}
-prices.push({name,price,desc});save();render();
-document.getElementById("pname").value="";
-document.getElementById("pprice").value="";
-document.getElementById("pdesc").value="";
+function closeModal(id){document.getElementById(id).classList.remove('open')}
+document.getElementById('orderForm').onsubmit=async e=>{
+e.preventDefault();
+let d=Object.fromEntries(new FormData(e.target));
+let message='سلام، برای ثبت سفارش طراحی پیام می‌دهم.\nنام: '+d.name+'\nشماره تماس: '+d.phone+'\nخدمت: '+d.service+'\nتوضیحات: '+(d.details||'—');
+try{
+await navigator.clipboard.writeText(message);
+notify('متن سفارش کپی شد؛ در بله آن را برای مدیر ارسال کنید.')
+}catch(err){
+notify('کانال بله باز می‌شود؛ اطلاعات فرم را همراه داشته باشید.')
 }
-function addGallery(){
-let file=document.getElementById("gphoto").files[0];
-let name=document.getElementById("gname").value.trim();
-if(!file||!name){alert("عنوان و تصویر را انتخاب کنید");return;}
-if(file.size>1500000){alert("حجم تصویر باید کمتر از ۱.۵ مگابایت باشد");return;}
-let reader=new FileReader();
-reader.onload=()=>{
-gallery.push({name,image:reader.result});
-try{save();render();alert("تصویر اضافه شد");}
-catch(e){gallery.pop();alert("حافظه مرورگر کافی نیست");}
+window.open('https://ble.ir/lOoloOlOoloOl','_blank','noopener');
+e.target.reset();closeModal('orderModal')
 };
-reader.readAsDataURL(file);
+function login(){document.getElementById('loginModal').classList.add('open')}
+function checkLogin(){
+if(document.getElementById('adminPass').value==='13881388'){
+closeModal('loginModal');
+document.getElementById('admin').classList.add('show');
+adminTab('services',document.querySelector('.adminnav button'));
+document.getElementById('admin').scrollIntoView()
+}else notify('رمز اشتباه است')
 }
-function delPrice(i){if(confirm("تعرفه حذف شود؟")){prices.splice(i,1);save();render();}}
-function delGallery(i){if(confirm("تصویر حذف شود؟")){gallery.splice(i,1);save();render();}}
-render();
-</script>
-</body>
-</html>
+function adminTab(t,b){
+document.querySelectorAll('.adminnav button').forEach(x=>x.classList.remove('active'));
+if(b)b.classList.add('active');
+let c=document.getElementById('adminContent');
+if(t==='services'){
+c.innerHTML='<h3>تعرفه‌ها</h3><button class="btn" onclick="serviceForm()">+ افزودن خدمت</button>'+services.map(s=>`<div class="row"><span>${esc(s.name)} — ${money(s.price)}</span><span><button class="mini" onclick="serviceForm(${s.id})">ویرایش</button> <button class="mini" onclick="delService(${s.id})">حذف</button></span></div>`).join('')
+}
+if(t==='orders'){
+c.innerHTML=`<h3>سفارش‌ها (${orders.length})</h3>`+(orders.length?orders.map((o,i)=>`<div class="row"><div><b>${esc(o.name)}</b> — ${esc(o.service)}<p class="muted">${esc(o.phone)} | ${esc(o.date)}</p><p>${esc(o.details)}</p></div><button class="mini" onclick="delOrder(${i})">حذف</button></div>`).join(''):'<p class="muted">هنوز سفارشی ثبت نشده است.</p>')
+}
+if(t==='promo')c.innerHTML=`<h3>تخفیف و جشنواره</h3><label class="field">عنوان<input id="pt" value="${esc(promo.title)}"></label><label class="field">توضیحات<textarea id="pd">${esc(promo.desc)}</textarea></label><button class="btn" onclick="savePromo()">ذخیره</button>`;
+if(t==='info')c.innerHTML=`<h3>اطلاعات سایت</h3><label class="field">درباره ما<textarea id="ia">${esc(info.about)}</textarea></label><label class="field">راه‌های ارتباطی<textarea id="ic">${esc(info.contact)}</textarea></label><button class="btn" onclick="saveInfo()">ذخیره</button>`;
+if(t==='works')c.innerHTML=`<h3>نمونه‌کارها و تصاویر</h3><p class="muted">از گالری گوشی یا فایل‌های دستگاه عکس انتخاب کن. تصویر برای نمایش در بخش نمونه‌کارها ذخیره می‌شود. در این نسخه، تصاویر فقط در همین مرورگر و دستگاه ذخیره می‌شوند.</p><label class="field">عنوان نمونه‌کار<input id="workName" placeholder="مثلاً طراحی لوگوی برند"></label><label class="field">توضیح کوتاه<input id="workDesc" placeholder="مثلاً طراحی هویت بصری"></label><label class="field">انتخاب عکس<input id="workImage" type="file" accept="image/*"></label><button class="btn" onclick="addWorkImage()">+ افزودن نمونه‌کار تصویری</button><button class="mini" onclick="addWork()">افزودن نمونه‌کار متنی</button>`+works.map((w,i)=>`<div class="row"><span>${w.image?'🖼️ ':''}${esc(w.name)} — ${esc(w.desc)}</span><button class="mini" onclick="delWork(${i})">حذف</button></div>`).join('')
+}
+function serviceForm(id){
+let s=services.find(x=>x.id==id),n=prompt('نام خدمت',s?.name||'');
+if(!n)return;
+let d=prompt('توضیحات',s?.desc||'')??'';
+let p=prompt('قیمت به تومان (عدد)',s?.price||'');
+if(p===null||!Number.isFinite(+p)||+p<0)return notify('قیمت معتبر نیست');
+if(s)Object.assign(s,{name:n,desc:d,price:+p});
+else services.push({id:Date.now(),name:n,desc:d,price:+p});
+put('services',services);render();adminTab('services')
+}
+function delService(id){services=services.filter(x=>x.id!=id);put('services',services);render();adminTab('services')}
+function delOrder(i){orders.splice(i,1);put('orders',orders);adminTab('orders')}
+function savePromo(){
+promo={title:document.getElementById('pt').value,desc:document.getElementById('pd').value};
+put('promo',promo);render();notify('ذخیره شد')
+}
+function saveInfo(){
+info={about:document.getElementById('ia').value,contact:document.getElementById('ic').value};
+put('info',info);render();notify('ذخیره شد')
+}
+function addWork(){
+let n=prompt('عنوان نمونه‌کار');if(!n)return;
+let d=prompt('توضیح کوتاه')||'DESIGN PROJECT';
+works.push({name:n,desc:d});put('works',works);adminTab('works');render()
+}
+async function addWorkImage(){
+const name=document.getElementById('workName').value.trim();
+const desc=document.getElementById('workDesc').value.trim();
+const file=document.getElementById('workImage').files[0];
+if(!name)return notify('عنوان نمونه‌کار را وارد کن');
+if(!file)return notify('ابتدا یک عکس انتخاب کن');
+if(!file.type.startsWith('image/'))return notify('فایل انتخاب‌شده تصویر نیست');
+try{
+const data=await new Promise((resolve,reject)=>{
+const reader=new FileReader();
+reader.onload=()=>{
+const img=new Image();
+img.onload=()=>{
+const max=1200,scale=Math.min(1,max/Math.max(img.width,img.height)),canvas=document.createElement('canvas');
+canvas.width
